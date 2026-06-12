@@ -1,0 +1,244 @@
+/* --- RESET STYLES THƯỜNG NIÊN --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #f4f6f9; /* Màu nền nhẹ nhàng, chuẩn giao diện mobile app */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+    color: #333333;
+}
+
+/* --- KHUNG CONTAINER ĐIỆN THOẠI (MAX-WIDTH CHUẨN BIO) --- */
+.bio-container {
+    width: 100%;
+    max-width: 480px; /* Định dạng chuẩn để hiển thị tuyệt đẹp trên cả PC và Mobile */
+    background-color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- VÙNG 1: BANNER NỀN --- */
+.banner-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- VÙNG 2: THÔNG TIN PROFILE --- */
+.profile-section {
+    text-align: center;
+    padding: 0 20px;
+    margin-top: -60px; /* Đẩy Avatar đè lên trên ảnh Banner */
+    position: relative;
+    z-index: 5;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 12px auto;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff; /* Viền trắng dày tạo khối nổi bật */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Tích xanh uy tín */
+.verified-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #0084ff;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    border: 2px solid #ffffff;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.profile-tagline {
+    font-size: 13px;
+    color: #0084ff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profile-bio {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* --- VÙNG 3: CÁC NÚT MẠNG XÃ HỘI TRÒN --- */
+.social-icons-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Màu thương hiệu từng icon */
+.social-icon.zalo { background-color: #0068ff; }
+.social-icon.facebook { background-color: #1877f2; }
+.social-icon.messenger { background-color: #006aff; }
+.social-icon.telegram { background-color: #229ed9; }
+
+/* --- VÙNG 4: DANH SÁCH KHỐI LIÊN KẾT (LINKS CARD) --- */
+.links-section {
+    padding: 0 16px;
+    flex-grow: 1;
+}
+
+.section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8e8e93;
+    margin: 20px 0 10px 4px;
+    letter-spacing: 1px;
+}
+
+/* Cấu trúc thẻ liên kết dạng danh sách đẹp */
+.bio-link-card {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #333333;
+    transition: all 0.2s ease;
+}
+
+.bio-link-card:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Tùy chọn hiệu ứng nhấp nháy/Nút nổi bật (Ví dụ link Zalo) */
+.bio-link-card.highlight {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e0f0ff 100%);
+    border-color: #b3d7ff;
+}
+.bio-link-card.highlight .link-title {
+    color: #0056b3;
+    font-weight: 700;
+}
+
+.link-icon {
+    font-size: 20px;
+    width: 35px;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+}
+
+.text-amber { color: #ffb300; }
+
+.link-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.link-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.link-desc {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.link-arrow {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* --- VÙNG 5: CHÂN TRANG --- */
+.bio-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.bio-footer p {
+    font-size: 13px;
+    color: #718096;
+}
+
+.bio-footer strong {
+    color: #4a5568;
+}
+
+.footer-sub {
+    font-size: 11px !important;
+    color: #a0aec0 !important;
+    margin-top: 4px;
+}
